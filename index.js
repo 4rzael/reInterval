@@ -1,7 +1,5 @@
 'use strict'
 
-require('es6-shim');
-
 function ReInterval (callback, interval, args) {
   var self = this;
 
@@ -34,7 +32,15 @@ function reInterval () {
   if (typeof arguments[1] !== 'number')
     throw new Error('interval needed');
 
-  var args = Object.assign([], arguments).slice(2);
+  var args;
+
+  if (arguments.length > 0) {
+    args = new Array(arguments.length - 2);
+
+    for (var i = 0; i < args.length; i++) {
+      args[i] = arguments[i + 2];
+    }
+  }
 
   return new ReInterval(arguments[0], arguments[1], args);
 }

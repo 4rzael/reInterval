@@ -1,14 +1,14 @@
 {
-  "name": "reinterval",
-  "version": "1.0.0",
+  "name": "reInterval",
+  "version": "1.0.1",
   "description": "reschedulable setInterval for node.js",
   "main": "index.js",
   "scripts": {
-    "test": "echo -e '\\nTests not implemented yet\\n'"
+    "test": "mocha test/*.js"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/4rzael/reinterval.git"
+    "url": "https://github.com/4rzael/reInterval.git"
   },
   "keywords": [
     "node",
@@ -20,15 +20,13 @@
   "author": "4rzael",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/4rzael/reinterval/issues"
+    "url": "https://github.com/4rzael/reInterval/issues"
   },
-  "homepage": "https://github.com/4rzael/reinterval",
+  "homepage": "https://github.com/4rzael/reInterval",
   "devDependencies": {
     "mocha": "^2.3.4",
     "chai": "^3.4.1",
-    "chai-as-promised": "^5.1.0"
-  },
-  "dependencies": {
+    "chai-as-promised": "^5.1.0",
     "es6-shim": "^0.33.13"
   }
 }
