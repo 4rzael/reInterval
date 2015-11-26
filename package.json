@@ -1,5 +1,5 @@
 {
-  "name": "reInterval",
+  "name": "reinterval",
   "version": "1.0.1",
   "description": "reschedulable setInterval for node.js",
   "main": "index.js",
