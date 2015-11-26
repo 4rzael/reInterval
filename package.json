@@ -1,0 +1,26 @@
+{
+  "name": "reinterval",
+  "version": "1.0.0",
+  "description": "reschedulable setInterval for node.js",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo -e '\\nTests not implemented yet\\n'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/4rzael/reinterval.git"
+  },
+  "keywords": [
+    "node",
+    "nodejs",
+    "setInterval",
+    "retimer",
+    "schedule"
+  ],
+  "author": "4rzael",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/4rzael/reinterval/issues"
+  },
+  "homepage": "https://github.com/4rzael/reinterval"
+}
