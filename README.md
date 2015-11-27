@@ -1,4 +1,5 @@
 # reInterval
+![](https://travis-ci.org/4rzael/reInterval.svg)
 
 reschedulable setInterval for node.js
 
