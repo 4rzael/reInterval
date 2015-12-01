@@ -1,5 +1,7 @@
 # reInterval
-![](https://travis-ci.org/4rzael/reInterval.svg)
+![TRAVIS](https://travis-ci.org/4rzael/reInterval.svg)
+
+[![NPM](https://nodei.co/npm/reinterval.png?downloads=true&downloadRank=true)](https://nodei.co/npm/reinterval/)
 
 reschedulable setInterval for node.js
 
