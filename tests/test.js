@@ -12,7 +12,7 @@ describe('reInterval', function() {
       var startTime = new Date().getTime();
 
       reInterval(function () {
-        if (Math.abs(new Date().getTime() - startTime - 1000) <= 10)
+        if (Math.abs(new Date().getTime() - startTime - 1000) <= 50)
           resolve();
         else
           reject(new Error('Took too much (or not enough) time'));
@@ -39,13 +39,28 @@ describe('reInterval', function() {
       var startTime = new Date().getTime();
 
       var interval = reInterval(function () {
-        if (Math.abs(new Date().getTime() - startTime - 800) <= 10)
+        if (Math.abs(new Date().getTime() - startTime - 800) <= 50)
           resolve();
         else
           reject(new Error('Took too much (or not enough) time'));
       }, 500);
 
-      setTimeout(interval.reschedule, 300, [500])
+      setTimeout(interval.reschedule, 300, 500)
+    });
+  });
+
+  it('should reschedule an Interval without interval args', function () {
+    return new Promise(function (resolve, reject) {
+      var startTime = new Date().getTime();
+
+      var interval = reInterval(function () {
+        if (Math.abs(new Date().getTime() - startTime - 800) <= 50)
+          resolve();
+        else
+          reject(new Error('Took too much (or not enough) time'));
+      }, 500);
+
+      setTimeout(interval.reschedule, 300)
     });
   });
 
