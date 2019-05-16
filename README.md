@@ -26,7 +26,7 @@ setTimeout(function () {
 
 ## API:
 
-###`reInterval(callback, interval[, param1, param2, ...])`
+### `reInterval(callback, interval[, param1, param2, ...])`
 
 This is exactly like setInterval.
 
@@ -35,20 +35,20 @@ _Arguments:_
   - `interval`: The number of milliseconds (thousandths of a second) that the `reInterval()` function should wait before each call to `callback`.
   - `param1, param2, ...`: *(OPTIONAL)* These arguments are passed to the `callback` function.
 
-####returns an `interval` object with the following methods:
+#### returns an `interval` object with the following methods:
 
-###`interval.reschedule([interval])`
+### `interval.reschedule([interval])`
 
 This function resets the `interval` and restarts it now.
 
 _Arguments:_
   - `interval`: *(OPTIONAL)* This argument can be used to change the amount of milliseconds to wait before each call to the `callback` passed to the `reInterval()` function.
 
-###`interval.clear()`
+### `interval.clear()`
 
 This function clears the interval. Can be used to temporarily clear the `interval`, which can be rescheduled at a later time.
 
-###`interval.destroy()`
+### `interval.destroy()`
 
 This function clears the interval, and will also clear the `callback` and `params` passed to reInterval, so calling this essentially just makes this object ready for overwriting with a new `interval` object. 
 
