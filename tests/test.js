@@ -11,11 +11,12 @@ describe('reInterval', function() {
     return new Promise(function (resolve, reject) {
       var startTime = new Date().getTime();
 
-      reInterval(function () {
+      var interval = reInterval(function () {
         if (Math.abs(new Date().getTime() - startTime - 1000) <= 50)
           resolve();
         else
           reject(new Error('Took too much (or not enough) time'));
+        interval.destroy();
       }, 1000);
     });
   });
@@ -26,6 +27,7 @@ describe('reInterval', function() {
 
       var interval = reInterval(function () {
           reject(new Error('Interval not cleared'));
+          interval.destroy();
       }, 200);
 
       setTimeout(interval.clear, 100);
@@ -43,6 +45,7 @@ describe('reInterval', function() {
           resolve();
         else
           reject(new Error('Took too much (or not enough) time'));
+        interval.destroy();
       }, 500);
 
       setTimeout(interval.reschedule, 300, 500)
@@ -58,9 +61,23 @@ describe('reInterval', function() {
           resolve();
         else
           reject(new Error('Took too much (or not enough) time'));
+        interval.destroy();
       }, 500);
 
       setTimeout(interval.reschedule, 300)
+    });
+  });
+
+  it('should get the correct args', function () {
+    return new Promise(function (resolve, reject) {
+      var interval = reInterval(function (a, b, c, d) {
+        if(a == 1 && b == 2 && c == 3 && d == 4){
+          resolve();
+        } else {
+          reject();
+        }
+        interval.destroy();
+      }, 500, 1, 2, 3, 4);
     });
   });
 
