@@ -28,5 +28,8 @@
     "chai": "^3.4.1",
     "chai-as-promised": "^5.1.0",
     "es6-shim": "^0.33.13"
-  }
+  },
+  "files": [
+    "index.js"
+  ]
 }
